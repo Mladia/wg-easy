@@ -98,7 +98,7 @@ services:
     container_name: wg-easy
     ports:
       - "51820:51820/udp"
-      - "51821:51821/tcp"
+      # - "51821:51821/tcp"  Not needed, as access is done through the traefik domain name
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
