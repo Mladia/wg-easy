@@ -29,5 +29,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository.toLowerCase() }}:v14.0.0-mladia
-            ghcr.io/${{ github.repository.toLowerCase() }}:latest
+            ghcr.io/mladia/wg-easy:v14.0.0-mladia
+            ghcr.io/mladia/wg-easy:latest
