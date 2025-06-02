@@ -1,4 +1,4 @@
-FROM docker.io/library/node:23-alpine AS build_node_modules
+FROM docker.io/library/node:24-alpine AS build_node_modules
 
 # Update npm to latest
 RUN npm install -g npm@latest
@@ -11,7 +11,7 @@ RUN npm ci --omit=dev &&\
 
 # Copy build result to a new image.
 # This saves a lot of disk space.
-FROM docker.io/library/node:23-alpine
+FROM docker.io/library/node:24-alpine
 COPY --from=build_node_modules /app /app
 
 # Move node_modules one directory up, so during development
