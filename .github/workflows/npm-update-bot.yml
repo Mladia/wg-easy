@@ -13,7 +13,7 @@ jobs:
     if: github.repository_owner == 'wg-easy'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wg-easy/wg-easy
           ref: master
